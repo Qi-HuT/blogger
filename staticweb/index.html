@@ -5,24 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="./css/me.css">
 </head>
 <body>
 <!--导航栏-->
 <!--ui 是代表这是使用一个组件 也许是semantic的固定格式-->
-<!--inverted 表示与当前状态，颜色等相反 segment表示是一个片段 attached表示依附于页面不加时导航栏为圆弧-->
-<nav class="ui inverted attached segment">
-<!--menu组件默认颜色为白色，需要转为黑色所以使用 inverted-->
-    <div class="ui inverted menu">
-        <h2 class="ui teal header">Blog</h2>
+<!--inverted 表示与当前状态，颜色等相反 segment表示是一个片段 attached表示依附于页面不加时导航栏为圆弧
+m-padded-tb-mini自定义的css属性-->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+    <div class="ui container">
+        <!--menu组件默认颜色为白色，需要转为黑色所以使用 inverted-->
+        <div class="ui inverted secondary menu">
+<!--           item代表这是menu里的每没一个条目 -->
+            <h2 class="ui teal header item">Blog</h2>
+<!--            i标签使用图标  class的home icon是semantic定义的-->
+            <a href="#" class="item"><i class="home icon"></i>首页</a>
+            <a href="#" class="item"><i class="idea icon"></i>分类</a>
+            <a href="#" class="item"><i class="tags icon"></i>标签</a>
+            <a href="#" class="item"><i class="info icon"></i>关于我</a>
+            <div class="right  item">
+                <div class="ui  icon transparent inverted input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
     </div>
 </nav>
 <!--内容-->
 <div>
-
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 </div>
 <!--底部-->
-<footer>
-
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+<!--        grid会将整个布局分成16份-->
+        <div class="ui inverted divided grid">
+            <div class="three wide column"></div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                <!--                竖着的列表的一个组件-->
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                <!--                竖着的列表的一个组件-->
+                <div class="ui inverted link list">
+<!--                    item 表示list的一个成员-->
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced" >最新博客</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+            </div>
+        </div>
+<!--        画横线-->
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2019 - 2020 Root酱 Designed by Root酱</p>
+    </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
