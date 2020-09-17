@@ -1,9 +1,38 @@
+.m-padded-mini {
+    padding: 0.2em !important;
+}
+.m-padded-tiny {
+    padding: 0.3em !important;
+}
 .m-padded-tb-mini {
     /*em等于14px   semantic自带的样式都加了(!important) 故也需要提高自定义的级别所以自定义的需要添加 !important */
     padding-top: 0.2em !important;
     padding-bottom: 0.2em !important;
 }
-
+.m-padded-tb-thin {
+    padding-top: 0.3em !important;
+    padding-bottom: 0.3em !important;
+}
+.m-padded-tb-small {
+    padding-top: 0.5em !important;
+    padding-bottom: 0.5em !important;
+}
+.m-padded-tb {
+    padding-top: 1em !important;
+    padding-bottom: 1em !important;
+}
+.m-padded-tb-large {
+    padding-top: 2em !important;
+    padding-bottom: 2em !important;
+}
+.m-padded-tb-big {
+    padding-top: 3em !important;
+    padding-bottom: 3em !important;
+}
+.m-padded-tb-huge {
+    padding-top: 4em !important;
+    padding-bottom: 4em !important;
+}
 .m-padded-tb-massive {
     padding-top: 5em !important;
     padding-bottom: 5em !important;
@@ -24,4 +53,9 @@
 /*透明度*/
 .m-opacity-mini {
     opacity: 0.8 !important;
+}
+
+/*-------display---------*/
+.m-inline-block {
+    display: inline-block !important;
 }

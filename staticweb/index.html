@@ -16,9 +16,9 @@ m-padded-tb-mini自定义的css属性-->
     <div class="ui container">
         <!--menu组件默认颜色为白色，需要转为黑色所以使用 inverted-->
         <div class="ui inverted secondary menu">
-<!--           item代表这是menu里的每没一个条目 -->
+           <!--item代表这是menu里的每没一个条目 -->
             <h2 class="ui teal header item">Blog</h2>
-<!--            i标签使用图标  class的home icon是semantic定义的-->
+            <!--i标签使用图标  class的home icon是semantic定义的-->
             <a href="#" class="item"><i class="home icon"></i>首页</a>
             <a href="#" class="item"><i class="idea icon"></i>分类</a>
             <a href="#" class="item"><i class="tags icon"></i>标签</a>
@@ -33,22 +33,81 @@ m-padded-tb-mini自定义的css属性-->
     </div>
 </nav>
 <!--内容-->
-<div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<div class="m-padded-tb-large">
+    <!--container响用式的效果，根据屏幕不同的尺寸，达到最好的最适应的空间显示效果-->
+    <div class="ui container">
+        <!--grid分为左11份，右11份-->
+        <div class="ui grid">
+            <div class="eleven wide column">
+                <!--header-->
+                <div class="ui top attached segment">
+                    <!--此处写twocolumngrid  则说明这个grid是分为两份而不是原来的默认16份,middle aligned垂直方向的居中-->
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <h3 class="ui teal header">博客</h3>
+                        </div>
+                        <!--right aligned 靠右-->
+                        <div class="right aligned column">
+                            <!--h元素是block元素所以会换行。通过自定义css属性使其不换行-->
+                            共<h2 class="ui orange header m-inline-block m-text-thin">14</h2>篇
+                        </div>
+                    </div>
+                </div>
+                <!--content-->
+                <div class="ui attached segment">
+                    <div class="ui segment">
+                        <div class="ui grid">
+                            <div class="eleven wide column">
+                                <!--header标题-->
+                                <h3 class="ui header">你真的理解什么是财富自由吗</h3>
+                                <p>多国人士高度评价中国统筹推进疫情防控和经济社会发展取得的显著成效，认为中国经济走上稳步复苏道路，为全球经济复苏带来了信心。......</p>
+                                <div class="ui grid">
+                                    <div class="eleven wide column"></div>
+                                    <div class="right aligned five wide column">
+                                        <a href="#" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin">认知升级</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="five wide column">
+                                <!--_blank点击新打开一个页面-->
+                                <a href="#" target="_blank">
+                                    <!--rounded圆角图片  图片大小800*450
+                                    图片寻找地址https://picsum.photos/-->
+                                    <img src="https://picsum.photos/800/450/?blur=2" alt="" class="ui rounded image">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--footer-->
+                <div class="ui bottom attached segment">
+                    <div class="ui middle aligned two column grid">
+                        <div class="column">
+                            <a href="#" class="ui mini teal basic button">上一页</a>
+                        </div>
+                        <div class="right aligned column">
+                            <a href="#" class="ui mini teal basic button">下一页</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="five wide column">
+                <div class="ui segment">
+
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!--底部-->
 <footer class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
-<!--        grid会将整个布局分成16份-->
+        <!--grid默认会将整个布局分成16份-->
         <div class="ui inverted divided grid">
             <div class="three wide column"></div>
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
-                <!--                竖着的列表的一个组件-->
+                <!--竖着的列表的一个组件-->
                 <div class="ui inverted link list">
                     <a href="#" class="item">用户故事（User story）</a>
                     <a href="#" class="item">用户故事（User story）</a>
@@ -58,9 +117,9 @@ m-padded-tb-mini自定义的css属性-->
             </div>
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
-                <!--                竖着的列表的一个组件-->
+                <!--竖着的列表的一个组件-->
                 <div class="ui inverted link list">
-<!--                    item 表示list的一个成员-->
+                    <!--item 表示list的一个成员-->
                     <a href="#" class="item">用户故事（User story）</a>
                     <a href="#" class="item">用户故事（User story）</a>
                     <a href="#" class="item">用户故事（User story）</a>
@@ -72,7 +131,7 @@ m-padded-tb-mini自定义的css属性-->
                 <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
             </div>
         </div>
-<!--        画横线-->
+        <!--画横线-->
         <div class="ui inverted section divider"></div>
         <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2019 - 2020 Root酱 Designed by Root酱</p>
     </div>
