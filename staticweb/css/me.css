@@ -38,6 +38,11 @@
     padding-bottom: 5em !important;
 }
 /*----------text---------*/
+.m-text {
+    font-weight: 300 !important;
+    letter-spacing: 1px !important;
+    line-height: 1.8;
+}
 .m-text-thin {
     font-weight: 300 !important;
 }
@@ -50,6 +55,13 @@
     /*行间距*/
     line-height: 1.8;
 }
+
+/*---------margin--------*/
+.m-margin-tb-tiny {
+    margin-top: 0.3em !important;
+    margin-bottom: 0.3em !important;
+}
+
 /*透明度*/
 .m-opacity-mini {
     opacity: 0.8 !important;
@@ -58,4 +70,13 @@
 /*-------display---------*/
 .m-inline-block {
     display: inline-block !important;
+}
+
+.m-container {
+    max-width: 72em !important;
+    margin: auto !important;
+}
+/*-------color-----*/
+.m-black {
+    color: #333 !important;
 }
