@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <link rel="stylesheet" href="./css/me.css">
+</head>
+<body>
+<!--导航栏-->
+<!--ui 是代表这是使用一个组件 也许是semantic的固定格式-->
+<!--inverted 表示与当前状态，颜色等相反 segment表示是一个片段 attached表示依附于页面不加时导航栏为圆弧
+m-padded-tb-mini自定义的css属性-->
+<nav class="ui inverted attached segment m-padded-tb-mini">
+    <div class="ui container">
+        <!--menu组件默认颜色为白色，需要转为黑色所以使用 inverted stackable为了适应手机端表示可堆叠-->
+        <div class="ui inverted secondary stackable menu">
+           <!--item代表这是menu里的每没一个条目 -->
+            <h2 class="ui teal header item">Blog</h2>
+            <!--i标签使用图标  class的home icon是semantic定义的-->
+            <a href="#" class="m-item item m-mobile-hide"><i class="small home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small clone icon"></i>归档</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small info icon"></i>关于我</a>
+            <div class="right m-item item m-mobile-hide">
+                <div class="ui  icon transparent inverted input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--menu toggle没有任何展示意思 只是为了jquery获取-->
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<!--内容-->
+<div class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <div class="ui top attached segment">
+            <div class="ui  horizontal link list">
+                <div class="item">
+                    <img src="https://picsum.photos/100/100/?blur=2" alt="" class="ui avatar image">
+                    <!--图片后面加一些文字可以用content属性-->
+                    <div class="content"><a href="#" class="header">哈哈</a></div>
+                </div>
+                <div class="item">
+                    <i class="calender icon"></i> 2017-10-01
+                </div>
+                <div class="item">
+                    <!--eye icon眼睛图标-->
+                    <i class="eye icon"></i> 123
+                </div>
+            </div>
+        </div>
+        <div class="ui attached segment">
+            <img src="https://picsum.photos/800/450/?blur=2" alt="" class="ui fluid rounded image">
+        </div>
+        <div class="ui attached padding segment">
+            <div class="ui right aligned basic segment">
+                <div class="ui orange basic label">原创</div>
+            </div>
+            <h2 class="ui center aligned header">springMVC执行原理</h2>
+            <div class="m-padded-lr-responsive m-padded-tb-big" id="content">
+
+            </div>
+            <!--标签-->
+            <div class="m-padded-lr-responsive">
+                <div class="ui basic teal left pointing label">方法论</div>
+            </div>
+        <!--    赞赏-->
+            <div class="ui center aligned basic segment">
+                <button id="payButton" class="ui orange basic circular button">赞赏</button>
+            </div>
+            <div class="ui payQR flowing popup transition hidden">
+                <div class="ui orange basic label">
+                    <div class="ui images" style="font-size: inherit !important;">
+                        <div class="image">
+                            <img src="./images/46215418.jpg" alt="" class="ui rounded bordered image" style="width: 120px">
+                        </div>
+                        <div>支付宝支付</div>
+                        <div class="image">
+                            <img src="./images/46215418.jpg" alt="" class="ui rounded bordered image" style="width: 120px">
+                        </div>
+                        <div>微信支付</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="ui attached segment">
+            <!--博客信息-->
+            <div class="ui middle aligned grid">
+                <div class="eleven wide ciolumn">
+                    <ui class="list">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ui>
+                </div>
+                <div class="five wide column">
+                    <img src="./images/46215418.jpg" alt="" class="ui right floated rounded bordered image" style="width: 100px">
+                </div>
+            </div>
+        </div>
+        <div class="ui attached segment">
+            <!--留言区域列表-->
+            <div class="ui teal segment">
+                <div class="ui threaded comments">
+                    <h3 class="ui dividing header">Comments</h3>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/100/100/?blur=2">
+                        </a>
+                        <div class="content">
+                            <a class="author">Matt</a>
+                            <div class="metadata">
+                                <span class="date">Today at 5:42PM</span>
+                            </div>
+                            <div class="text">
+                                How artistic!
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/100/100/?blur=2">
+                        </a>
+                        <div class="content">
+                            <a class="author">Elliot Fu</a>
+                            <div class="metadata">
+                                <span class="date">Yesterday at 12:30AM</span>
+                            </div>
+                            <div class="text">
+                                <p>This has been very useful for my research. Thanks as well!</p>
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                        <div class="comments">
+                            <div class="comment">
+                                <a class="avatar">
+                                    <img src="https://picsum.photos/100/100/?blur=2">
+                                </a>
+                                <div class="content">
+                                    <a class="author">Jenny Hess</a>
+                                    <div class="metadata">
+                                        <span class="date">Just now</span>
+                                    </div>
+                                    <div class="text">
+                                        Elliot you are always so right :)
+                                    </div>
+                                    <div class="actions">
+                                        <a class="reply">Reply</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comment">
+                        <a class="avatar">
+                            <img src="https://picsum.photos/100/100/?blur=2">
+                        </a>
+                        <div class="content">
+                            <a class="author">Joe Henderson</a>
+                            <div class="metadata">
+                                <span class="date">5 days ago</span>
+                            </div>
+                            <div class="text">
+                                Dude, this is awesome. Thanks so much
+                            </div>
+                            <div class="actions">
+                                <a class="reply">Reply</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="ui form">
+                <div class="field">
+                    <textarea name="content" placeholder="输入评论"></textarea>
+                </div>
+                <div class="fields">
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <div class="ui left icon input">
+                            <i class="user icon"></i>
+                            <input type="text" name="nickname" placeholder="姓名">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <div class="ui left icon input">
+                            <i class="mail icon"></i>
+                            <input type="text" name="email" placeholder="邮箱">
+                        </div>
+                    </div>
+                    <div class="field m-mobile-wide m-margin-bottom-small">
+                        <button class="ui teal button m-mobile-wide"><i class="edit icon"></i>发布评论</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--底部-->
+<footer class="ui inverted vertical segment m-padded-tb-massive">
+    <div class="ui center aligned container">
+        <!--grid默认会将整个布局分成16份-->
+        <div class="ui inverted divided  stackable grid">
+            <div class="three wide column">
+                <img src="./images/46215418.jpg" alt="" class="ui rounded image" style="width: 110px">
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                <!--竖着的列表的一个组件-->
+                <div class="ui inverted link list">
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
+                <!--竖着的列表的一个组件-->
+                <div class="ui inverted link list">
+                    <!--item 表示list的一个成员-->
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                    <a href="#" class="item">用户故事（User story）</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui inverted header m-text-thin m-text-spaced" >最新博客</h4>
+                <p class="m-text-thin m-text-spaced m-opacity-mini">这是我的个人博客、会分享关于编程、写作、思考相关的任何内容，希望可以给来到这儿的人有所帮助...</p>
+            </div>
+        </div>
+        <!--画横线-->
+        <div class="ui inverted section divider"></div>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2019 - 2020 Root酱 Designed by Root酱</p>
+    </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+
+        $('#payButton').popup({
+            popup: $('.payQR.popup'),
+            on : 'click',
+            position : 'bottom center'
+        });
+    </script>
+</body>
+</html>

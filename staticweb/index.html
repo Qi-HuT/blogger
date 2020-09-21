@@ -14,16 +14,17 @@
 m-padded-tb-mini自定义的css属性-->
 <nav class="ui inverted attached segment m-padded-tb-mini">
     <div class="ui container">
-        <!--menu组件默认颜色为白色，需要转为黑色所以使用 inverted-->
-        <div class="ui inverted secondary menu">
+        <!--menu组件默认颜色为白色，需要转为黑色所以使用 inverted stackable为了适应手机端表示可堆叠-->
+        <div class="ui inverted secondary stackable menu">
            <!--item代表这是menu里的每没一个条目 -->
             <h2 class="ui teal header item">Blog</h2>
             <!--i标签使用图标  class的home icon是semantic定义的-->
-            <a href="#" class="item"><i class="home icon"></i>首页</a>
-            <a href="#" class="item"><i class="idea icon"></i>分类</a>
-            <a href="#" class="item"><i class="tags icon"></i>标签</a>
-            <a href="#" class="item"><i class="info icon"></i>关于我</a>
-            <div class="right  item">
+            <a href="#" class="m-item item m-mobile-hide"><i class="small home icon"></i>首页</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small idea icon"></i>分类</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small tags icon"></i>标签</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small clone icon"></i>归档</a>
+            <a href="#" class="m-item item m-mobile-hide"><i class="small info icon"></i>关于我</a>
+            <div class="right m-item item m-mobile-hide">
                 <div class="ui  icon transparent inverted input">
                     <input type="text" placeholder="Search...">
                     <i class="search link icon"></i>
@@ -31,13 +32,17 @@ m-padded-tb-mini自定义的css属性-->
             </div>
         </div>
     </div>
+    <!--menu toggle没有任何展示意思 只是为了jquery获取-->
+    <a href="#" class="ui menu toggle black icon button m-right-top m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
 </nav>
 <!--内容-->
-<div class="m-container m-padded-tb-large">
+<div class="m-container m-padded-tb-big">
     <!--container响用式的效果，根据屏幕不同的尺寸，达到最好的最适应的空间显示效果-->
     <div class="ui container">
         <!--grid分为左11份，右11份-->
-        <div class="ui grid">
+        <div class="ui stackable grid">
             <div class="eleven wide column">
                 <!--header-->
                 <div class="ui top attached segment">
@@ -56,7 +61,8 @@ m-padded-tb-mini自定义的css属性-->
                 <!--content-->
                 <div class="ui attached segment">
                     <div class="ui padded vertical segment m-padded-tb-large">
-                        <div class="ui grid">
+                        <!--mobile reversed（反序） 表示在手机端 eleven wide 和 five wide互换顺序-->
+                        <div class="ui mobile reversed stackable grid">
                             <div class="eleven wide column">
                                 <!--header标题-->
                                 <h3 class="ui header">你真的理解什么是财富自由吗</h3>
@@ -107,7 +113,7 @@ m-padded-tb-mini自定义的css属性-->
                 </div>
             </div>
             <div class="five wide column">
-                <div class="ui segments">
+                <div class="ui segments m-margin-top-large">
                     <div class="ui secondary segment">
                         <div class="ui two column grid">
                             <div class="column">
@@ -147,7 +153,7 @@ m-padded-tb-mini自定义的css属性-->
                         </dic>
                     </div>
                 </div>
-                <div class="ui segments">
+                <div class="ui segments m-margin-top-large">
                     <div class="ui secondary segment">
                         <div class="ui two column grid">
                             <div class="column">
@@ -183,7 +189,7 @@ m-padded-tb-mini自定义的css属性-->
 
                     </div>
                 </div>
-                <div class="ui segments">
+                <div class="ui segments m-margin-top-large">
                     <div class="ui secondary segment">
                         <div class="ui two column grid">
                             <i class="bookmark icon"></i>最新推荐
@@ -199,6 +205,10 @@ m-padded-tb-mini自定义的css属性-->
                         <a href="#" class="m-black m-text-thin" target="_blank"></a>
                     </div>
                 </div>
+                <h4 class="ui horizontal divider header">扫码关注我</h4>
+                <div class="ui centered card" style="width: 11em">
+                    <img src="./images/46215418.jpg" alt="" class="round image" style="width: 11em">
+                </div>
             </div>
         </div>
     </div>
@@ -207,8 +217,10 @@ m-padded-tb-mini自定义的css属性-->
 <footer class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
         <!--grid默认会将整个布局分成16份-->
-        <div class="ui inverted divided grid">
-            <div class="three wide column"></div>
+        <div class="ui inverted divided  stackable grid">
+            <div class="three wide column">
+                <img src="./images/46215418.jpg" alt="" class="ui rounded image" style="width: 110px">
+            </div>
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
                 <!--竖着的列表的一个组件-->
@@ -237,10 +249,15 @@ m-padded-tb-mini自定义的css属性-->
         </div>
         <!--画横线-->
         <div class="ui inverted section divider"></div>
-        <p class="m-text-thin m-text-spaced m-opacity-mini">Copyright © 2019 - 2020 Root酱 Designed by Root酱</p>
+        <p class="m-text-thin m-text-spaced m-opacity-tiny">Copyright © 2019 - 2020 Root酱 Designed by Root酱</p>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <script>
+        $('.menu.toggle').click(function () {
+            $('.m-item').toggleClass('m-mobile-hide');
+        });
+    </script>
 </body>
 </html>
