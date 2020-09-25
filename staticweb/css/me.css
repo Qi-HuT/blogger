@@ -7,6 +7,10 @@ body {
 .m-padded-tiny {
     padding: 0.3em !important;
 }
+
+.m-padded {
+    padding: 1em !important;
+}
 .m-padded-tb-mini {
     /*em等于14px   semantic自带的样式都加了(!important) 故也需要提高自定义的级别所以自定义的需要添加 !important */
     padding-top: 0.2em !important;
@@ -95,6 +99,17 @@ body {
     top: 0;
     right: 0;
 }
+
+.m-fixed {
+    position: fixed !important;
+    /*值越大 越在上层*/
+    z-index: 1 !important;
+}
+.m-right-bottom {
+    bottom: 0 !important;
+    right: 0 !important;
+}
+
 /*-------display---------*/
 .m-inline-block {
     display: inline-block !important;

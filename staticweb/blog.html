@@ -75,7 +75,7 @@ m-padded-tb-mini自定义的css属性-->
                     Yahoo、Eric Meyer 和 Alice base.css 中采用的 Reset 都没有很好地考虑中文排版。<i class="serif">Typo.css</i> 要做的就是解决中文排版的问题。</p>
 
                 <p><strong><i class="serif">Typo.css</i> 测试于如下平台：</strong></p>
-                <table summary="Typo.css 的测试平台列表">
+                <table class="ui table" summary="Typo.css 的测试平台列表">
                     <thead>
                     <tr>
                         <th>OS/浏览器</th>
@@ -270,7 +270,7 @@ h5,h6{font-size:1em;}
                 <h3 id="section3">三、附录</h3>
 
                 <h5 id="appendix1">1、<i class="serif">Typo.css</i> 排版偏重点</h5>
-                <table summary="Typo.css 排版偏重点">
+                <table class="ui table" ummary="Typo.css 排版偏重点">
                     <thead>
                     <tr>
                         <th>类型</th>
@@ -462,7 +462,7 @@ h5,h6{font-size:1em;}
                 </div>
             </div>
         </div>
-        <div class="ui attached segment">
+        <div id="comment-container" class="ui bottom attached segment">
             <!--留言区域列表-->
             <div class="ui teal segment">
                 <div class="ui threaded comments">
@@ -564,6 +564,21 @@ h5,h6{font-size:1em;}
         </div>
     </div>
 </div>
+    <div class="m-padded-tiny m-fixed m-right-bottom">
+        <div class="ui vertical icon buttons">
+            <button type="button" class="ui toc teal button">目录</button>
+            <a href="#comment-container" class="ui teal button">留言</a>
+            <button class="ui icon button"><i class="weixin icon"></i></button>
+            <a href="#" class="ui icon button"><i class="chevron up icon"></i></a>
+        </div>
+    </div>
+<div class="ui toc-container flowing popup transition hidden">
+
+</div>
+
+
+
+
 <!--底部-->
 <footer class="ui inverted vertical segment m-padded-tb-massive">
     <div class="ui center aligned container">
@@ -614,6 +629,11 @@ h5,h6{font-size:1em;}
             popup: $('.payQR.popup'),
             on : 'click',
             position : 'bottom center'
+        });
+        $('.toc.button').popup({
+            popup: $('.toc-container.popup'),
+            on : 'click',
+            position : 'left center'
         });
     </script>
 </body>
